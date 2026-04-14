@@ -7,17 +7,95 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FD54B2"
     tools:context=".Signin">
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Signin"
-        android:textSize="38sp"
+        android:text="✨Signin✨"
+        android:textSize="47sp"
         android:textAlignment="center"
         android:textStyle="bold|italic"
+        android:fontFamily="cursive"
         android:textColor="#D5DDE6"
-        android:background="@drawable/shape" />
+        android:background="@drawable/shape2" />
+<!--    below is a card view-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        android:padding="10dp"
+        android:layout_margin="10dp">
+
+<!--        below is a linear layout that align content vertically -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="#964096">
+
+<!--            Below is email Edittext -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="📧 Enter Email Address"
+                android:textColorHint="#000"
+                android:id="@+id/email"
+                android:textColor="#000"
+                android:layout_margin="8dp"
+                android:background="#fff"
+                android:padding="11dp"/>
+<!--            Below is the password edit text-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="🔑 Enter Your Password"
+                android:textColorHint="#000"
+                android:id="@+id/password"
+                android:textColor="#000"
+                android:layout_margin="8dp"
+                android:background="#fff"
+                android:padding="11dp"/>
+
+<!--            below is the sign in button-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="👮🏽 Signin"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="8dp"
+                android:textColor="#F1F4F8"
+                android:backgroundTint="#FC309E"
+                android:id="@+id/signinbtn" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dont Have an Account Signup"
+                android:textAlignment="center"
+                android:textSize="23sp"
+                android:layout_marginTop="25dp"
+                android:textColor="#000"
+                android:id="@+id/signuptxt"/>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
 
 </LinearLayout>
