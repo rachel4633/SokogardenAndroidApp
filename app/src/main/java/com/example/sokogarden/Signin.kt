@@ -35,7 +35,7 @@ class Signin : AppCompatActivity() {
         }
         signinButton.setOnClickListener {
 //            specify the api
-            val api = "https://kbenkamotho.alwaysdata.net/api/signin"
+            val api = "https://nkiroterakel.alwaysdata.net/api/signin"
 //          create a RequestParams that will enable you to hold the data in form of a bundle/package
             val data = RequestParams()
 //            add/append/attach the email and the password
