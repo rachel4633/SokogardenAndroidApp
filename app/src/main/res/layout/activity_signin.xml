@@ -7,9 +7,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FD54B2"
+    android:gravity="center_horizontal"
+    android:background="@drawable/signin_background"
     tools:context=".Signin">
-
 
     <TextView
         android:layout_width="match_parent"
@@ -21,7 +21,14 @@
         android:fontFamily="cursive"
         android:textColor="#D5DDE6"
         android:background="@drawable/shape2" />
-<!--    below is a card view-->
+
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/icon_signup_circle"/>
+
+    <!--    below is a card view-->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +43,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="10dp"
-            android:background="#964096">
+            android:background="#811381">
 
 <!--            Below is email Edittext -->
             <EditText
@@ -85,13 +92,6 @@
                 android:layout_marginTop="25dp"
                 android:textColor="#000"
                 android:id="@+id/signuptxt"/>
-
-
-
-
-
-
-
         </LinearLayout>
 
 

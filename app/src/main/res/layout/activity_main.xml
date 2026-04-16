@@ -6,7 +6,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="#040A3A"
+    android:layout_gravity="center"
+    android:background="@drawable/mainbackground"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -20,6 +21,12 @@
         android:fontFamily="cursive"
         android:textColor="#D5DDE6"
         android:background="@drawable/shape" />
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/icon_signup_circle"
+        android:layout_gravity="center_horizontal"/>
 
 <!--    Below is a linear layout that align content horizontally-->
     <LinearLayout
@@ -51,8 +58,22 @@
             android:backgroundTint="#053F75"
             android:id="@+id/signinbtn"/>
 
-
-
     </LinearLayout>
+<!--    Below s the progress bar-->
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar"/>
+
+<!--    Below is our recyclerview -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/single_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
 
 </LinearLayout>

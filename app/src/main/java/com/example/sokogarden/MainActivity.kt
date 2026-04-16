@@ -3,10 +3,13 @@ package com.example.sokogarden
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,5 +34,17 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(applicationContext, Signin::class.java)
             startActivity(intent)
         }
+//        find the recycler view by use of there ids
+        val recyclerview = findViewById<RecyclerView>(R.id.recyclerview)
+        val progressBar = findViewById<ProgressBar>(R.id.progressbar)
+
+//        specify the Api url endpoint for fetching the product
+
+        val url = "https://nkiroterakel.alwaysdata.net/api/get_products"
+//        import the helper class
+        val helper = ApiHelper(applicationContext)
+
+//        inside of the helper class access the function loadproduct
+        helper.loadProducts(url, recyclerview, progressBar)
     }
 }
