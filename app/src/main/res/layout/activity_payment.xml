@@ -83,7 +83,7 @@
                 android:id="@+id/txtdescription"
                 android:layout_marginTop="9sp"
                 android:textAlignment="center"
-                android:text="This is the Descrition"
+                android:text="This is the Description"
                 android:textColor="#fff"
                 android:textSize="20sp"/>
 
