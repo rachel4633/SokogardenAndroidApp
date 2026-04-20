@@ -33,6 +33,17 @@ class About : AppCompatActivity() {
             if (it == TextToSpeech.SUCCESS) {
                 val locale = null
                 tts.language = Locale.US
+
+                // the voice code
+                val voices = tts.voices
+                for (voice in voices){
+                    // voice for male or female
+                    if (voice.name.contains("female", ignoreCase = true) && voice.locale == Locale.US){
+                        tts.setVoice(voice)
+                        break
+                    }
+                }
+
             }//end
             speechbutton.setOnClickListener {
                 val text = textview.text.toString()
@@ -44,8 +55,10 @@ class About : AppCompatActivity() {
     }
 
     override fun onDestroy() {
-        tts.stop()
-        tts.shutdown()
+        if (::tts.isInitialized){
+            tts.stop()
+            tts.shutdown()
+        }
         super.onDestroy()
     }
 
